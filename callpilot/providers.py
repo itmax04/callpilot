@@ -27,7 +27,13 @@ class RequestBudget:
 
 
 def input_hash(transcript):
-    return hashlib.sha256(transcript.model_dump_json().encode()).hexdigest()
+    # Hash exactly what is sent to the model; CRM linkage (deal_id) is deliberately excluded.
+    return hashlib.sha256(json.dumps(model_input(transcript), ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
+
+def model_input(transcript):
+    payload=transcript.model_dump(mode='json')
+    payload.pop('deal_id', None)
+    return payload
 
 
 def prompt_text(version):
@@ -44,7 +50,7 @@ def messages(transcript, version):
     # No CRM stage/amount, no reference labels. Roles separate policy from untrusted text.
     return [
         {'role':'developer','content':prompt_text(version)},
-        {'role':'user','content':json.dumps({'untrusted_transcript': transcript.model_dump(mode='json')}, ensure_ascii=False)},
+        {'role':'user','content':json.dumps({'untrusted_transcript': model_input(transcript)}, ensure_ascii=False)},
     ]
 
 
