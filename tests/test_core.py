@@ -6,7 +6,13 @@ from callpilot.metrics import score, classification_metrics
 from callpilot.providers import DemoProvider, ProviderError
 ROOT=Path(__file__).resolve().parents[1]
 def test_demo_fixture_and_quotes():
- t=Transcript.model_validate_json((ROOT/'data/transcripts/CALL-001.json').read_text()); r=DemoProvider(ROOT/'data').analyze(t,'v2'); assert len(r.criteria)==7; assert all(x['valid'] for x in r.evidence_checks)
+    t=Transcript.model_validate_json((ROOT/'data/transcripts/CALL-001.json').read_text()); r=DemoProvider(ROOT/'data').analyze(t,'v2'); assert len(r.criteria)==7; assert all(x['valid'] for x in r.evidence_checks)
+
+def test_demo_never_constructs_openai(monkeypatch):
+    import openai
+    monkeypatch.setattr(openai, 'OpenAI', lambda **_: (_ for _ in ()).throw(AssertionError('network provider constructed')))
+    t=Transcript.model_validate_json((ROOT/'data/transcripts/CALL-001.json').read_text())
+    assert DemoProvider(ROOT/'data').analyze(t,'v2').provider_status=='demo'
 def test_unknown_demo_fails_without_fallback():
  t=Transcript(call_id='UNKNOWN',date='2025-01-01',language='ru',utterances=[{'id':'u1','role':'client','text':'x'}],synthetic=True)
  with pytest.raises(ProviderError): DemoProvider(ROOT/'data').analyze(t,'v2')
@@ -35,3 +41,15 @@ def test_timeout_is_recorded_and_retried_without_demo_fallback():
     provider=OpenAIProvider(settings,budget=RequestBudget(2),client=Fake(),sleeper=lambda _:None)
     result=provider.analyze(t,'v2')
     assert result.provider_status=='failed' and result.error_message=='APITimeoutError' and result.attempts==2 and not result.criteria
+
+def test_invalid_live_schema_is_error_without_fixture_fallback():
+    from types import SimpleNamespace
+    from callpilot.config import Settings
+    from callpilot.providers import OpenAIProvider, RequestBudget
+    class Responses:
+        def parse(self, **kwargs): return SimpleNamespace(status='completed', output_parsed=None, usage=None)
+    class Fake: responses=Responses()
+    t=Transcript.model_validate_json((ROOT/'data/transcripts/CALL-001.json').read_text())
+    p=OpenAIProvider(Settings(openai_api_key='secret',allow_paid_live=True,max_requests=1),budget=RequestBudget(1),client=Fake(),sleeper=lambda _:None)
+    r=p.analyze(t,'v2')
+    assert r.provider_status=='invalid_response' and not r.criteria
