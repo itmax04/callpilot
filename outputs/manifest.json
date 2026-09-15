@@ -1,0 +1,212 @@
+[
+  {
+    "record_id": "CALL-001",
+    "path": "data/transcripts/CALL-001.json",
+    "sha256": "00427c9403d5cd1de438957dc98f47f31d526fdefe4c5c81516ced9fc4da59f9",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-002",
+    "path": "data/transcripts/CALL-002.json",
+    "sha256": "cd350c3fc31d822dc5e58de790b85e020813a44b3d91cba40c086f92c09a2745",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-003",
+    "path": "data/transcripts/CALL-003.json",
+    "sha256": "48338d9fa779f4558a086dcb6672fdccbef044c55a5d01c5725781e217ccd5d3",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-004",
+    "path": "data/transcripts/CALL-004.json",
+    "sha256": "a5709decc8d47749d73abc6b9f75e2d8ccac6667f6d184af9a7b1397255d4470",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-005",
+    "path": "data/transcripts/CALL-005.json",
+    "sha256": "69f3ae311e3c3a1416e3784d57b66af351dbcb36fe30a8ac79c0f7ebb31c8a54",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-006",
+    "path": "data/transcripts/CALL-006.json",
+    "sha256": "c4da72f255649a3f234eb91ec6d727f98ebc4eabe53a2510d34b80de6de7d58a",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-007",
+    "path": "data/transcripts/CALL-007.json",
+    "sha256": "cfe3d1c46af91696d765dffaff7391690d95555a0299f6be58a7a33ba04a7d4e",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-008",
+    "path": "data/transcripts/CALL-008.json",
+    "sha256": "0f92c78581787a62e3e356cf1e7457d1b38c239d5d48c68613aff051f8e27632",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-009",
+    "path": "data/transcripts/CALL-009.json",
+    "sha256": "a217e62504a5eb1dc3452fca7dc155d9948706c3ed712e6934a39e32bc01c40f",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-010",
+    "path": "data/transcripts/CALL-010.json",
+    "sha256": "d38a19042fcfe248ca95a3b3681a09be800f82e0f80e188e81a2add0df392e10",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-011",
+    "path": "data/transcripts/CALL-011.json",
+    "sha256": "cc945a15d3155da6022d9820c0e6632a78e7fb961524e296dfd66742923771f5",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-012",
+    "path": "data/transcripts/CALL-012.json",
+    "sha256": "9da189feabae5ff369c78aeb3522a0dd4d0cd177b2f4e4ad0281221eaaadf2e1",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-013",
+    "path": "data/transcripts/CALL-013.json",
+    "sha256": "1600e45b91758cae353c634261899b14ba2b21586c1631d31982f827d350ac36",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-014",
+    "path": "data/transcripts/CALL-014.json",
+    "sha256": "4386fc8e60dad83aabdda9f12c5143793e5dea194acb7c4a0367b5b20be81017",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-015",
+    "path": "data/transcripts/CALL-015.json",
+    "sha256": "37b6509edc5e015084506240d1fe564daf7049f575e2198f0e0aa1aedd79eb76",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-016",
+    "path": "data/transcripts/CALL-016.json",
+    "sha256": "757bff4995a359d3d60515b1f013274ed7ce265edc39fe5271e0c624c285bd98",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-017",
+    "path": "data/transcripts/CALL-017.json",
+    "sha256": "3f023edb06c23f914ce569be4335332da5e6989cbaa437fd5db82881e89404cd",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-018",
+    "path": "data/transcripts/CALL-018.json",
+    "sha256": "4950879e4885b832741c7b601dcd3053d40e13806168ea9fabc96be63466fe6e",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-019",
+    "path": "data/transcripts/CALL-019.json",
+    "sha256": "9aff9159170a699c01a46e4be981aabe774296e5741d9204509a5d137862d938",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-020",
+    "path": "data/transcripts/CALL-020.json",
+    "sha256": "dfa7681a5dba940bb548f51d668b598542dcc22d063c8706ec4e010d615bde30",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-021",
+    "path": "data/transcripts/CALL-021.json",
+    "sha256": "11bd7498e9154d68f714921edf3b7dcc01a6d365c53a91d6da61edae377982ec",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-022",
+    "path": "data/transcripts/CALL-022.json",
+    "sha256": "00d314b1e05ef78e869fdcf50543d179cf389c5146662833d685832c25e22993",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-023",
+    "path": "data/transcripts/CALL-023.json",
+    "sha256": "6d75213055588fcc0a0a4f313a4d375a2616258851fe44b855d7ab20a2f08698",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "CALL-024",
+    "path": "data/transcripts/CALL-024.json",
+    "sha256": "a70426aafe3aea76965069784dee52996c1274f6081deef60e5ae564346a082f",
+    "status": "accepted",
+    "reason": null
+  },
+  {
+    "record_id": "empty_transcript",
+    "path": "data/problematic/empty_transcript.json",
+    "sha256": "9ef9c727e80f05296a8d7cdf52a56a70c9850a3a511fc6581f7a6f203312a292",
+    "status": "rejected",
+    "reason": "problematic fixture (not part of accepted catalog)"
+  },
+  {
+    "record_id": "exact_duplicate",
+    "path": "data/problematic/exact_duplicate.json",
+    "sha256": "00427c9403d5cd1de438957dc98f47f31d526fdefe4c5c81516ced9fc4da59f9",
+    "status": "duplicate",
+    "reason": "duplicate of CALL-001"
+  },
+  {
+    "record_id": "malformed",
+    "path": "data/problematic/malformed.json",
+    "sha256": "6d9187486544f2f4b76f59cef5c6ed8beafcdb45b272d373cb4ccec24aebe353",
+    "status": "rejected",
+    "reason": "problematic fixture (not part of accepted catalog)"
+  },
+  {
+    "record_id": "missing_deal",
+    "path": "data/problematic/missing_deal.json",
+    "sha256": "fef007e96e7b39eaf1ecb2c9b1e812d325bd1ee5aaf6529cb1fe5dd0a264ad33",
+    "status": "warning",
+    "reason": "missing deal_id; text analysed"
+  },
+  {
+    "record_id": "prompt_injection",
+    "path": "data/problematic/prompt_injection.json",
+    "sha256": "9a6c54ed813720a58089615bde5edab953ece403c601e33568395c863696b83d",
+    "status": "warning",
+    "reason": "instruction treated as untrusted transcript data; text analysed"
+  },
+  {
+    "record_id": "unknown_deal",
+    "path": "data/problematic/unknown_deal.json",
+    "sha256": "b37105ae551a342303cad30d77b16e3491a7c553ba64b23e379a9d3fa7754a8f",
+    "status": "warning",
+    "reason": "deal_id absent in CRM; text analysed"
+  }
+]

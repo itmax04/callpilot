@@ -1,0 +1,1 @@
+{"IsEncrypted":false,"Values":{"AzureWebJobsStorage":"UseDevelopmentStorage=true","FUNCTIONS_WORKER_RUNTIME":"python","CALLPILOT_MODE":"demo","AZURE_BLOB_CONTAINER":"callpilot-results"}}

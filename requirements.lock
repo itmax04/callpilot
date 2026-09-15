@@ -1,0 +1,9 @@
+pydantic==2.13.5
+pydantic-settings==2.15.0
+sqlalchemy==2.0.53
+psycopg==3.3.5
+psycopg-binary==3.3.5
+openai==1.109.1
+streamlit==1.63.0
+python-dotenv==1.2.3
+pytest==8.4.2

@@ -1,0 +1,9 @@
+{
+  "call_id": "BAD-EMPTY",
+  "deal_id": "D001",
+  "date": "2025-01-02",
+  "language": "ru",
+  "synthetic": true,
+  "recording_complete": true,
+  "utterances": []
+}

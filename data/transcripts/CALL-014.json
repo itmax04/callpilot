@@ -1,0 +1,25 @@
+{
+  "call_id": "CALL-014",
+  "deal_id": "D007",
+  "date": "2025-01-15",
+  "language": "uk",
+  "synthetic": true,
+  "recording_complete": false,
+  "utterances": [
+    {
+      "id": "CALL-014-u01",
+      "role": "client",
+      "text": "Нам потрібен облік угод для двох відділів."
+    },
+    {
+      "id": "CALL-014-u02",
+      "role": "seller",
+      "text": "Скільки людей працюють в обох відділах?"
+    },
+    {
+      "id": "CALL-014-u03",
+      "role": "client",
+      "text": "Загалом вісім."
+    }
+  ]
+}

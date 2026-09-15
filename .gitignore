@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+outputs/*.db
+outputs/*.csv
+outputs/*.json
+outputs/*.md
+*.pyc
+!outputs/manager_report.md
+!outputs/summary.json
+!outputs/manifest.json
+!outputs/discrepancies.csv
+outputs/*-check.*

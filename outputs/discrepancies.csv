@@ -1,0 +1,10 @@
+call_id,criterion_id,gold,answer_v1,answer_v2,gold_evidence,answer_evidence,error_category
+CALL-001,5,not_applicable,not_met,not_applicable,[],[],status_mismatch
+CALL-002,1,met,met,met,"[""Вітаю, я менеджер навчальної команди. Хочу обговорити контроль заявок.""]","[""Вітаю, я менеджер навчальної команди. Хочу обговорити контроль заявок.""]",invalid_quote
+CALL-003,2,not_met,not_met,insufficient_data,[],[],status_mismatch
+CALL-006,1,insufficient_data,not_met,insufficient_data,[],[],status_mismatch
+CALL-009,5,not_applicable,not_met,not_applicable,[],[],status_mismatch
+CALL-010,1,met,met,met,"[""Вітаю, я менеджер навчальної команди. Хочу обговорити контроль заявок.""]","[""Выдуманная цитата для проверки механизма.""]",invalid_quote
+CALL-011,2,not_met,not_met,insufficient_data,[],[],status_mismatch
+CALL-014,1,insufficient_data,not_met,insufficient_data,[],[],status_mismatch
+CALL-019,2,not_met,not_met,insufficient_data,[],[],status_mismatch

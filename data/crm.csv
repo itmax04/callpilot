@@ -1,0 +1,13 @@
+deal_id,manager_id,stage,amount,currency
+D001,M01,lead,1000,EUR
+D002,M02,qualified,1000,EUR
+D003,M03,proposal,1250,EUR
+D004,M01,negotiation,1250,EUR
+D005,M02,lead,1500,EUR
+D006,M03,qualified,1500,EUR
+D007,M01,proposal,1750,EUR
+D008,M02,negotiation,1750,EUR
+D009,M03,lead,2000,EUR
+D010,M01,qualified,2000,EUR
+D011,M02,proposal,2250,EUR
+D012,M03,negotiation,2250,EUR

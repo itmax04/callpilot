@@ -1,0 +1,40 @@
+{
+  "v1": {
+    "accuracy": 0.9761904761904762,
+    "macro_f1": 0.9397584033613445,
+    "n": 168,
+    "class_counts": {
+      "met": 108,
+      "not_applicable": 9,
+      "not_met": 33,
+      "insufficient_data": 18
+    },
+    "evidence": {
+      "checked_quotes": 238,
+      "invalid_quotes": 2,
+      "invalid_rate": 0.008403361344537815
+    },
+    "calls_success": 27,
+    "calls_failed": 0,
+    "coverage": 0.8306878306878307
+  },
+  "v2": {
+    "accuracy": 0.9821428571428571,
+    "macro_f1": 0.9688644688644689,
+    "n": 168,
+    "class_counts": {
+      "met": 108,
+      "not_applicable": 9,
+      "not_met": 33,
+      "insufficient_data": 18
+    },
+    "evidence": {
+      "checked_quotes": 238,
+      "invalid_quotes": 1,
+      "invalid_rate": 0.004201680672268907
+    },
+    "calls_success": 27,
+    "calls_failed": 0,
+    "coverage": 0.7936507936507936
+  }
+}
