@@ -13,3 +13,4 @@ outputs/*.md
 !outputs/manifest.json
 !outputs/discrepancies.csv
 outputs/*-check.*
+!outputs/analysis_results.csv

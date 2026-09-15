@@ -4,7 +4,7 @@ from .config import get_settings
 from .ingest import ingest
 from .providers import DemoProvider, OpenAIProvider, ProviderError, RequestBudget, input_hash, prompt_hash
 from .db import make_db, upsert_inputs, store_run, cached_results
-from .reporting import compare, write_report
+from .reporting import compare, write_report, write_detailed_csv
 ROOT=Path(__file__).resolve().parents[1]
 
 def run_pipeline(settings, split='all'):
@@ -44,6 +44,7 @@ def run_pipeline(settings, split='all'):
     # Gold is read only here; it is never passed to either provider.
     gold_path=ROOT/'data/gold_labels.json'
     summary=compare(allres,gold_path,out)
+    write_detailed_csv(allres,out)
     write_report(summary,manifest,run_ids,out)
     (out/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
     return summary

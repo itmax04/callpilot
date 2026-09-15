@@ -3,6 +3,17 @@ from pathlib import Path
 from .metrics import classification_metrics, evidence_stats, score
 from .models import Status
 
+def write_detailed_csv(results_by_version, out_dir):
+    out_dir.mkdir(exist_ok=True)
+    path=out_dir/'analysis_results.csv'
+    fields=['prompt_version','call_id','provider_status','model','prompt_hash','input_hash','attempts','latency_ms','input_tokens','output_tokens','criterion_id','status','explanation','utterance_ids','quotes','review_required']
+    with path.open('w',newline='',encoding='utf-8') as f:
+        w=csv.DictWriter(f,fieldnames=fields); w.writeheader()
+        for version,results in results_by_version.items():
+            for r in results:
+                for c in r.criteria or [None]:
+                    w.writerow({'prompt_version':version,'call_id':r.call_id,'provider_status':r.provider_status,'model':r.model,'prompt_hash':r.prompt_hash,'input_hash':r.input_hash,'attempts':r.attempts,'latency_ms':r.latency_ms,'input_tokens':r.input_tokens,'output_tokens':r.output_tokens,'criterion_id':c.criterion_id if c else '','status':c.status.value if c else '','explanation':c.explanation if c else r.error_message,'utterance_ids':json.dumps(c.utterance_ids,ensure_ascii=False) if c else '','quotes':json.dumps(c.quotes,ensure_ascii=False) if c else '','review_required':r.review_required})
+
 def compare(results_by_version, gold_path, out_dir):
     gold=json.loads(Path(gold_path).read_text()); rows=[]; summary={}
     answers={}
