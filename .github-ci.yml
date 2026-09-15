@@ -1,2 +1,0 @@
-# Для CI перенесите этот job в .github/workflows/ci.yml при публикации репозитория.
-# python -m pip install -e '.[test]' && pytest -q && python -m callpilot.cli all
