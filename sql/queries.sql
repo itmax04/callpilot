@@ -15,3 +15,19 @@ FROM evaluations e, json_each(e.result_json,'$.criteria') j GROUP BY 1,2;
 SELECT r.prompt_version, AVG(json_extract(j.value,'$.status')='met') AS raw_met_rate, COUNT(*) AS criterion_rows
 FROM evaluations e JOIN runs r ON r.run_id=e.run_id, json_each(e.result_json,'$.criteria') j
 WHERE json_extract(j.value,'$.status') IN ('met','not_met') GROUP BY r.prompt_version;
+-- Средняя итоговая оценка, покрытие и размер выборки по звонкам.
+WITH criteria AS (
+ SELECT e.run_id,e.call_id,json_extract(j.value,'$.status') AS status
+ FROM evaluations e,json_each(e.result_json,'$.criteria') j
+), per_call AS (
+ SELECT run_id,call_id,
+   SUM(status='met') AS met_n,
+   SUM(status IN ('met','not_met')) AS usable_n,
+   COUNT(*) AS criterion_n
+ FROM criteria GROUP BY run_id,call_id
+)
+SELECT r.prompt_version,
+ AVG(CASE WHEN p.usable_n=0 THEN NULL ELSE 1.0*p.met_n/p.usable_n END) AS average_score,
+ AVG(1.0*p.usable_n/p.criterion_n) AS coverage,
+ COUNT(*) AS calls
+FROM per_call p JOIN runs r ON r.run_id=p.run_id GROUP BY r.prompt_version;
