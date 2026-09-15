@@ -22,7 +22,7 @@ python -m pytest -q
 streamlit run callpilot/streamlit_app.py
 ```
 
-Результаты: `outputs/manager_report.md`, `outputs/manifest.json`, `outputs/summary.json`, `outputs/discrepancies.csv`, `outputs/callpilot.db`. Demo не требует ключа и не делает сетевых запросов. Для PostgreSQL: `docker compose up -d`, задайте `CALLPILOT_DATABASE_URL=postgresql+psycopg://callpilot:callpilot_local_only@localhost:5432/callpilot` и повторите команду. Если Docker недоступен, локально проверяется SQLite, это не доказательство PostgreSQL-интеграции.
+Результаты (включая готовый demo-отчёт): `outputs/manager_report.md`, `outputs/manifest.json`, `outputs/summary.json`, `outputs/discrepancies.csv`, `outputs/callpilot.db`. Demo не требует ключа и не делает сетевых запросов. Для PostgreSQL: `docker compose up -d`, задайте `CALLPILOT_DATABASE_URL=postgresql+psycopg://callpilot:callpilot_local_only@localhost:5432/callpilot` и повторите команду. Если Docker недоступен, локально проверяется SQLite, это не доказательство PostgreSQL-интеграции.
 
 ## Поток данных
 
